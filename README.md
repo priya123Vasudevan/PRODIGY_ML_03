@@ -1,24 +1,21 @@
-# PRODIGY_ML_03
-Image Classification using CNN:
+Key Components
+Data Preparation:
 
-Data Preparation: The script reads training and testing images from specified directories.
+Images are organized into training and testing datasets.
+Data augmentation techniques may be applied to enhance the training dataset's diversity.
+Model Development:
 
-Data Augmentation: ImageDataGenerator is used for data augmentation. It rescales pixel values to [0,1] and applies transformations such as shear, zoom, and horizontal flip to augment the training dataset.
+CNN architecture is designed using convolutional layers (Conv2D), pooling layers (MaxPool2D), and fully connected layers (Dense).
+Activation functions (e.g., ReLU) introduce non-linearity to the model.
+Model Training:
 
-CNN Model Architecture: A Sequential model is constructed for the CNN:
+The CNN model is compiled with appropriate loss function, optimizer, and evaluation metrics.
+Training data is fed into the model in batches, and parameters are updated iteratively to minimize the loss.
+Model Evaluation:
 
-Convolutional layers (Conv2D) with ReLU activation extract image features.
-MaxPooling layers reduce spatial dimensions of feature maps.
-Flatten layer converts 2D feature maps to a 1D vector.
-Dense layers with ReLU activation introduce non-linearity.
-Final Dense layer uses sigmoid activation for binary classification.
-Model Compilation: The model is compiled with:
+The trained model's performance is assessed on a separate test dataset.
+Metrics such as accuracy, precision, recall, and F1-score may be used to evaluate the model's performance.
 
-Adam optimizer
-Binary crossentropy loss function (for binary classification)
-Accuracy as the evaluation metric
-Model Training: The model is trained on the training dataset using the fit function for a specified number of epochs (e.g., 10). Validation dataset (test_generator) is used for monitoring model performance during training.
-
-Model Evaluation: After training, the model is evaluated on the test dataset using the evaluate method, and the test accuracy is printed.
-
-Feel free to customize and adjust the provided content to match the specifics of your project. This summary outlines the essential steps and components of an image classification project leveraging Convolutional Neural Networks.
+to clone the repository:-
+git clone https://github.com/your_username/image-classification-cnn.git
+cd image-classification-cnn
